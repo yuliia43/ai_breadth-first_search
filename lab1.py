@@ -1,6 +1,3 @@
-import math
-import pdb
-
 class Person:
 	gender = ""
 	pair = 0
