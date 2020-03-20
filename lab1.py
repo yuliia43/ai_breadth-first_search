@@ -1,12 +1,3 @@
-class Person:
-	gender = ""
-	pair = 0
-
-	def __init__(self, gender, pair_number):
-		self.gender = gender
-		self.pair = pair_number
-	
-
 class State:
 	rightbank = {}
 	leftbank = {}
