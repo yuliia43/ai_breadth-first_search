@@ -212,8 +212,11 @@ def get_state_string(state):    #returns formated string of states from first to
 	 						((' males: '+ str(males_right)) if males_right!=0 else '') +\
 	 						((' females: '+ str(females_right)) if females_right!=0 else '')))  +"|\n"	
 	if state.prev_state != 'first' and state.prev_state != None:
-		state_string = get_state_string(state.prev_state)+state_string
-	return state_string
+		return get_state_string(state.prev_state)+state_string
+	else:
+		return '| '+ ('{:^20}'.format('left bank'))+" | " +\
+			 ('{:^20}'.format('boat'))+" | "+ ('{:^20}'.format('right bank'))+" |\n"\
+			 +"-"*70+"\n"+state_string
 
 
 bank = {'pairs_num':3, 'males_num':0, 'females_num':0}
